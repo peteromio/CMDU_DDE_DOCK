@@ -3,3 +3,4 @@ build/
 install.sh
 uninstall.sh
 cmdu-dock-plugin_3.20.0-0_amd64.deb
+pkg/usr/lib/dde-dock/plugins/libCMDU.so
