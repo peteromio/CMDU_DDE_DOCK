@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.13)
 
-set(PLUGIN_NAME "HTYCMDU")
+set(PLUGIN_NAME "CMDU")
 
 project(${PLUGIN_NAME})
 
@@ -41,8 +41,6 @@ set(CMAKE_INSTALL_PREFIX "/usr")
 set(PG_FILE_PATH /usr/lib/dde-dock/plugins/lib${PLUGIN_NAME}.so)
 
 install(TARGETS ${PLUGIN_NAME} LIBRARY DESTINATION lib/dde-dock/plugins)
-
-
 
 add_custom_target(uninstall
   COMMAND 

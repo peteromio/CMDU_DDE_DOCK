@@ -1,0 +1,7 @@
+Package: cmdu-dock-plugin
+Version: 3.20.0.0-0
+Maintainer: Omi <rpedro2047@gmail.com>
+Description: Dock plugin, shows Deepin Linux system network speed and other system values
+Homepage: https://github.com/peteromio/CMDU_DDE_DOCK
+Architecture: amd64
+Depends: libdtkwidget5 (>=5.2.2.2-1), libdtkcore5 (>=5.2.2.2-1), libdtkgui5 (>=5.2.2.1-1)
