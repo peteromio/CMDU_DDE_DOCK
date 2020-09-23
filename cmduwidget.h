@@ -14,6 +14,7 @@ public:
     void setEnabled(const bool b);
     QString text;
     int mp, cp;
+    void isThemeChanged(bool b);
 
 signals:
     void requestUpdateGeometry() const;
@@ -25,6 +26,7 @@ private:
     QPixmap m_cachedIcon;
     QString m_cachedTime;
     QSettings m_settings;
+    Qt::GlobalColor tcolor = Qt::white;
     bool m_24HourFormat;
 
 };

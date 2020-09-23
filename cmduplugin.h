@@ -3,8 +3,11 @@
 
 #include "dde-dock/pluginsiteminterface.h"
 #include "cmduwidget.h"
+#include <DGuiApplicationHelper>
 #include <QTimer>
 #include <QLabel>
+
+DGUI_USE_NAMESPACE
 
 class CMDUPlugin : public QObject, PluginsItemInterface
 {
@@ -36,6 +39,7 @@ public:
 
 private slots:
     void updateCMDU();
+    void onThemeTypeChanged(DGuiApplicationHelper::ColorType themeType);
 
 private:
     long int i, db, ub, dbt, ubt, dbt1, ubt1, dbt0, ubt0, tt0, idle0;

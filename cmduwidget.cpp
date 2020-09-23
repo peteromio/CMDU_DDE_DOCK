@@ -14,6 +14,7 @@ CMDUWidget::CMDUWidget(QWidget *parent)
     text = " ↑    0KB/s \n ↓    0KB/s ";
     mp = 0;
     cp = 0;
+    Qt::GlobalColor tcolor = Qt::white;
 }
 
 bool CMDUWidget::enabled()
@@ -44,15 +45,18 @@ void CMDUWidget::paintEvent(QPaintEvent *e)
     Q_UNUSED(e);
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(Qt::white);
+    painter.setPen(tcolor);
     QFont font = qApp->font();
     font.setFamily("Noto Mono");
     painter.setFont(font);
     painter.drawText(rect().adjusted(2,0,0,0), Qt::AlignLeft | Qt::AlignVCenter, text);
     if(mp < 90){
-        painter.fillRect(0, height()*(100-mp)/100, 2, height()*mp/100, Qt::white);
+        painter.fillRect(0, height()*(100-mp)/100, 2, height()*mp/100, tcolor);
     }else{
         painter.fillRect(0, height()*(100-mp)/100, 2, height()*mp/100, Qt::red);
     }
-    painter.fillRect(width()-2, height()*(100-cp)/100, 2, height()*cp/100, Qt::white);
+    painter.fillRect(width()-2, height()*(100-cp)/100, 2, height()*cp/100, tcolor);
+}
+void CMDUWidget::isThemeChanged(bool b) {
+    tcolor = b ? Qt::black : Qt::white;
 }
