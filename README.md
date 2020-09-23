@@ -56,5 +56,4 @@ $ sudo apt install ./cmdu-dock-plugin_3.XX.X-X_amd64.deb
 Para desinstalar
 ``` shell
 $ sudo apt remove cmdu-dock-plugin
-
 ```
