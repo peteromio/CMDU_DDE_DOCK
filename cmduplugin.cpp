@@ -125,17 +125,17 @@ const QString CMDUPlugin::itemContextMenu(const QString &itemKey)
     boot_record["isActive"] = true;
     items.push_back(boot_record);
 
-    QMap<QString, QVariant> about;
-    about["itemId"] = "about";
-    about["itemText"] = tr("About");
-    about["isActive"] = true;
-    items.push_back(about);
-
     QMap<QString, QVariant> changelog;
     changelog["itemId"] = "changelog";
     changelog["itemText"] = tr("Changelog");
     changelog["isActive"] = true;
     items.push_back(changelog);
+
+    QMap<QString, QVariant> about;
+    about["itemId"] = "about";
+    about["itemText"] = tr("About");
+    about["isActive"] = true;
+    items.push_back(about);
 
     QMap<QString, QVariant> menu;
     menu["items"] = items;
